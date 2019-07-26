@@ -20,15 +20,20 @@ class GroupsController < ApplicationController
     render json: group
   end
 
-  def delete
-    group = Event.find(params[:id])
+  def destroy
+    group = Group.find(params[:id])
     group.destroy
   end
 
+  def remove_user
+    group = Group.find(params[:group_id])
+    user = User.find(params[:group_id])
+    UserGroup.where(group_id: group.id, user_id: user.id).destroy_all
+  end
 
   private
 
   def group_params
-    params.require(:group).permit(:name)
+    params.require(:group).permit(:name, :creator)
   end
 end
