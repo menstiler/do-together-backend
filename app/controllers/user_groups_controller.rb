@@ -9,6 +9,7 @@ class UserGroupsController < ApplicationController
     render json: user_group
   end
 
+
   private
 
   def user_group_params

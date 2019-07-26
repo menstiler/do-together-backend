@@ -16,9 +16,9 @@ Activity.destroy_all
   User.create(name: Faker::Name.name)
 end
 
-3.times do
-  Group.create(name: Faker::Company.name)
-end
+Group.create(name: Faker::Company.name, creator: User.find(1).name)
+Group.create(name: Faker::Company.name, creator: User.find(2).name)
+Group.create(name: Faker::Company.name, creator: User.find(3).name)
 
 UserGroup.create(user_id: 1, group_id: 1)
 UserGroup.create(user_id: 2, group_id: 1)
