@@ -11,7 +11,7 @@ class ActivitiesController < ApplicationController
   end
 
   def create
-    activity = Group.create(activity_params)
+    activity = Activity.create(activity_params)
     render json: activity
   end
 
@@ -29,6 +29,6 @@ class ActivitiesController < ApplicationController
   private
 
   def activity_params
-    params.require(:group).permit(:title, :location)
+    params.require(:activity).permit(:title, :location)
   end
 end

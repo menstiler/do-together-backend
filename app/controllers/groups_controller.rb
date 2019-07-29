@@ -26,9 +26,11 @@ class GroupsController < ApplicationController
   end
 
   def remove_user
+    # byebug
     group = Group.find(params[:group_id])
-    user = User.find(params[:group_id])
-    UserGroup.where(group_id: group.id, user_id: user.id).destroy_all
+    user = User.find(params[:user_id])
+    user_group = UserGroup.where(group_id: group.id, user_id: user.id)
+    user_group.destroy_all
   end
 
   private
