@@ -1,3 +1,3 @@
 class ActivitySerializer < ActiveModel::Serializer
-  attributes :id, :title, :location, :events, :groups, :users
+  attributes :id, :title, :location, :events, :groups, :users, :image, :icon
 end
