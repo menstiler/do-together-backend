@@ -13,15 +13,15 @@ Event.destroy_all
 Activity.destroy_all
 
 
-User.create(name: Faker::Name.name, image: "001-woman.svg")
-User.create(name: Faker::Name.name, image: "003-man-1.svg")
-User.create(name: Faker::Name.name, image: "004-man-2.svg")
-User.create(name: Faker::Name.name, image: "005-man-3.svg")
-User.create(name: Faker::Name.name, image: "006-man-4.svg")
-User.create(name: Faker::Name.name, image: "009-cowboy.svg")
-User.create(name: Faker::Name.name, image: "010-cowgirl.svg")
-User.create(name: Faker::Name.name, image: "014-man-6.svg")
-User.create(name: Faker::Name.name, image: "015-gymnast.svg")
+User.create(name: Faker::Name.name, image: "001-woman.svg", password: "123")
+User.create(name: Faker::Name.name, image: "003-man-1.svg", password: "123")
+User.create(name: Faker::Name.name, image: "004-man-2.svg", password: "123")
+User.create(name: Faker::Name.name, image: "005-man-3.svg", password: "123")
+User.create(name: Faker::Name.name, image: "006-man-4.svg", password: "123")
+User.create(name: Faker::Name.name, image: "009-cowboy.svg", password: "123")
+User.create(name: Faker::Name.name, image: "010-cowgirl.svg", password: "123")
+User.create(name: Faker::Name.name, image: "014-man-6.svg", password: "123")
+User.create(name: Faker::Name.name, image: "015-gymnast.svg", password: "123")
 
 
 Group.create(name: Faker::Company.name, creator: User.find(1).name)
