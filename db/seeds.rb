@@ -12,9 +12,17 @@ UserGroup.destroy_all
 Event.destroy_all
 Activity.destroy_all
 
-10.times do
-  User.create(name: Faker::Name.name)
-end
+
+User.create(name: Faker::Name.name, image: "001-woman.svg")
+User.create(name: Faker::Name.name, image: "003-man-1.svg")
+User.create(name: Faker::Name.name, image: "004-man-2.svg")
+User.create(name: Faker::Name.name, image: "005-man-3.svg")
+User.create(name: Faker::Name.name, image: "006-man-4.svg")
+User.create(name: Faker::Name.name, image: "009-cowboy.svg")
+User.create(name: Faker::Name.name, image: "010-cowgirl.svg")
+User.create(name: Faker::Name.name, image: "014-man-6.svg")
+User.create(name: Faker::Name.name, image: "015-gymnast.svg")
+
 
 Group.create(name: Faker::Company.name, creator: User.find(1).name)
 Group.create(name: Faker::Company.name, creator: User.find(2).name)
