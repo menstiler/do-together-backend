@@ -8,4 +8,5 @@ class User < ApplicationRecord
   has_many :events, through: :groups
   has_many :activities, through: :events
 
+  has_secure_password
 end
