@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :groups, through: :user_groups
   has_many :events, through: :groups
   has_many :activities, through: :events
+  validates :username, uniqueness: true
 
   has_secure_password
 end
