@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   post "/login", to: "auth#login"
   get "/auto_login", to: "auth#auto_login"
   resources :events
+  resources :attendees
   resources :user_groups
   resources :groups
   resources :users
