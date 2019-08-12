@@ -13,7 +13,8 @@ class UsersController < ApplicationController
     user = User.new(
       username: params[:username],
       password: params[:password],
-      name: params[:name]
+      name: params[:name],
+      image: params[:image]
     )
 
     if user.save
