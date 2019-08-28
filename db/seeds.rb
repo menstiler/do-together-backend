@@ -139,4 +139,3 @@ Event.create(group_id: lunch.id, activity_id: eat.id, name: 'Taking Lunch', time
 Event.create(group_id: memes.id, activity_id: chill.id, name: 'Meme Review', time: '2019-08-02T17:00', creator: kevin.name)
 Event.create(group_id: fun.id, activity_id: drink.id, name: 'Community Happy Hour', time: '2019-08-02T16:00', creator: stephen.name)
 Event.create(group_id: smoke.id, activity_id: vape.id, name: 'Go outside', time: '2019-07-31T15:30', creator: dean.name)
->>>>>>> d6469334a95179931b8663d2d848cea7379b97b2
